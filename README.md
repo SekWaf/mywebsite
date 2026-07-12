@@ -30,8 +30,7 @@ All visible content is in **`index.html`** — search for the text you want to c
 - **Photo** — replace `assets/profile.jpg` with your own (portrait orientation works well;
   the frame is a circle). If you rename it, update the `src` on `<img class="portrait">`.
 - **Links** — the GitHub and X buttons (in the hero and Contact) point at your accounts.
-- **About / News / Publications / Teaching / Projects / Contact** — each is a clearly-marked
-  `<section>` in the `<body>`.
+- **About / Contact** — each is a clearly-marked `<section>` in the `<body>`.
 
 ### Change the colors / fonts
 
