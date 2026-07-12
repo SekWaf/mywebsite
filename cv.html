@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sefwak Guy — Curriculum Vitae</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <style>
+    :root {
+      --ink: #1a1a1a; --muted: #555; --accent: #3b5bdb; --border: #ddd;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: var(--sans); color: var(--ink); line-height: 1.55;
+      max-width: 760px; margin: 0 auto; padding: 48px 32px 80px; background: #fff;
+    }
+    .back { font-size: 13px; color: var(--accent); text-decoration: none; }
+    .back:hover { text-decoration: underline; }
+    header { margin: 8px 0 28px; }
+    h1 { font-size: 2rem; margin: 0; letter-spacing: -0.02em; }
+    .sub { color: var(--muted); margin: 4px 0 0; }
+    .meta { color: var(--muted); font-size: 14px; margin-top: 8px; }
+    .meta a { color: var(--accent); text-decoration: none; }
+    h2 {
+      font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--accent); border-bottom: 2px solid var(--border);
+      padding-bottom: 6px; margin: 32px 0 14px;
+    }
+    .row { display: grid; grid-template-columns: 120px 1fr; gap: 16px; margin-bottom: 14px; }
+    .row .when { color: var(--muted); font-size: 14px; }
+    .row .what strong { font-weight: 700; }
+    .row .what .where { color: var(--muted); }
+    ul { margin: 6px 0; padding-left: 18px; }
+    li { margin-bottom: 4px; }
+    .pub { margin-bottom: 10px; font-size: 14.5px; }
+    .pub .v { color: var(--muted); font-style: italic; }
+    @media print {
+      body { padding: 0; font-size: 12px; }
+      .back, .print-hint { display: none; }
+      h2 { margin-top: 20px; }
+      a { color: var(--ink); text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="back" href="index.html">&larr; Back to homepage</a>
+  <p class="print-hint" style="font-size:13px;color:#777;margin:8px 0 0;">
+    Tip: use your browser's <strong>Print &rarr; Save as PDF</strong> to export this CV.
+  </p>
+
+  <header>
+    <h1>Sefwak Guy</h1>
+    <p class="sub">Assistant Professor of Computer Science, Columbia University</p>
+    <p class="meta">
+      sefwak.guy@columbia.edu &middot;
+      500 W 120th St, New York, NY 10027 &middot;
+      <a href="index.html">homepage</a> &middot;
+      <a href="#">Google Scholar</a>
+    </p>
+  </header>
+
+  <h2>Appointments</h2>
+  <div class="row">
+    <div class="when">2025 – present</div>
+    <div class="what"><strong>Assistant Professor</strong>, <span class="where">Department of Computer Science, Columbia University</span></div>
+  </div>
+  <div class="row">
+    <div class="when">2023 – 2025</div>
+    <div class="what"><strong>Postdoctoral Researcher</strong>, <span class="where">MIT CSAIL</span></div>
+  </div>
+
+  <h2>Education</h2>
+  <div class="row">
+    <div class="when">2018 – 2023</div>
+    <div class="what"><strong>Ph.D. in Computer Science</strong>, <span class="where">University of California, Berkeley</span><br/>Dissertation: <em>Verifiable Machine Learning Systems</em></div>
+  </div>
+  <div class="row">
+    <div class="when">2014 – 2018</div>
+    <div class="what"><strong>B.S. in Computer Science</strong>, <span class="where">Georgia Institute of Technology</span></div>
+  </div>
+
+  <h2>Selected Honors</h2>
+  <ul>
+    <li>NSF CAREER Award (2026)</li>
+    <li>Best Paper Award, NeurIPS (2026)</li>
+    <li>Google Ph.D. Fellowship in Machine Learning (2021)</li>
+  </ul>
+
+  <h2>Selected Publications</h2>
+  <div class="pub"><strong>Sefwak Guy</strong>, A. Novak, L. Chen. Succinct Proofs for Neural Network Inference. <span class="v">NeurIPS 2026.</span></div>
+  <div class="pub"><strong>Sefwak Guy</strong>, T. Alvarez, K. Sato. zkML: Verifiable Machine Learning at Scale. <span class="v">IEEE S&amp;P 2025.</span></div>
+  <div class="pub">J. Williams, <strong>Sefwak Guy</strong>, D. Kumar. Auditing Foundation Models with Interactive Proofs. <span class="v">ICML 2025.</span></div>
+  <div class="pub"><strong>Sefwak Guy</strong>, E. Rossi. Trust but Verify: A Framework for Accountable AI Systems. <span class="v">ACM CCS 2024.</span></div>
+
+  <h2>Teaching</h2>
+  <ul>
+    <li>COMS 4771 — Machine Learning (Fall 2026)</li>
+    <li>COMS 6998 — Trustworthy &amp; Verifiable AI (Spring 2026)</li>
+    <li>COMS 3157 — Advanced Programming (Fall 2025)</li>
+  </ul>
+
+  <h2>Service</h2>
+  <ul>
+    <li>Area Chair: NeurIPS, ICML, ICLR</li>
+    <li>Program Committee: IEEE S&amp;P, ACM CCS, USENIX Security</li>
+    <li>Faculty mentor, Columbia Emerging Scholars in Computing</li>
+  </ul>
+</body>
+</html>
