@@ -7,7 +7,6 @@ Live at **https://sekwaf.github.io/mywebsite/**.
 ```
 mywebsite/
 ├── index.html          # the whole site — content + styling inline in one file
-├── cv.html             # printable CV page (Print → Save as PDF)
 ├── assets/
 │   ├── profile.jpg     # your portrait
 │   └── favicon.svg     # browser-tab icon
@@ -30,10 +29,9 @@ All visible content is in **`index.html`** — search for the text you want to c
 - **Name, title, affiliation** — the `<header class="hero">` block near the top of `<body>`.
 - **Photo** — replace `assets/profile.jpg` with your own (portrait orientation works well;
   the frame is a circle). If you rename it, update the `src` on `<img class="portrait">`.
-- **Links** — the `href="#"` placeholders on Google Scholar / GitHub / X, and your email.
+- **Links** — the GitHub and X buttons (in the hero and Contact) point at your accounts.
 - **About / News / Publications / Teaching / Projects / Contact** — each is a clearly-marked
   `<section>` in the `<body>`.
-- **CV** — edit `cv.html`, or point the `CV` button's `href` at a PDF you upload.
 
 ### Change the colors / fonts
 
