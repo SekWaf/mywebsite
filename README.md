@@ -1,60 +1,64 @@
 # Academic personal website
 
-A clean, modern, single-page academic homepage — static HTML/CSS/JS, no build step, free
-to host on GitHub Pages. Live at **https://sekwaf.github.io/mywebsite/** once Pages is enabled.
+A clean, single-page academic homepage in an elegant **editorial / literary serif** style —
+one self-contained static HTML file, no build step, free to host on GitHub Pages.
+Live at **https://sekwaf.github.io/mywebsite/**.
 
 ```
 mywebsite/
-├── index.html          # the homepage (edit your content here)
+├── index.html          # the whole site — content + styling inline in one file
 ├── cv.html             # printable CV page (Print → Save as PDF)
-├── css/style.css       # all styling; theme colors live at the top in :root
-├── js/main.js          # dark-mode toggle + nav highlighting
 ├── assets/
-│   ├── profile.svg     # placeholder avatar — replace with your photo
+│   ├── profile.jpg     # your portrait
 │   └── favicon.svg     # browser-tab icon
-└── .nojekyll           # tells GitHub Pages to serve files as-is
+├── .nojekyll           # tells GitHub Pages to serve files as-is
+└── .gitignore          # keeps local /previews (alternate style drafts) out of the repo
 ```
 
-## Turn on free hosting (one time)
+> The homepage is fully self-contained: all CSS lives in the `<style>` block at the top of
+> `index.html`, and there is no external CSS/JS. Edit that one file and everything updates.
 
-1. Commit and push these files to the `main` branch of `SekWaf/mywebsite`.
-2. On GitHub: **Settings → Pages**.
-3. Under *Build and deployment*, set **Source = Deploy from a branch**,
-   **Branch = `main`**, folder **`/ (root)`**, then **Save**.
-4. Wait ~1 minute. Your site is live at `https://sekwaf.github.io/mywebsite/`.
+## Hosting (already on)
 
-Every future `git push` to `main` republishes automatically.
+GitHub Pages is enabled: **Settings → Pages → Deploy from a branch → `main` / `(root)`**.
+Every `git push` to `main` republishes automatically after ~1 minute.
 
 ## Customize it
 
-All the visible content is in **`index.html`** — search for the text you want to change.
-Key things to replace:
+All visible content is in **`index.html`** — search for the text you want to change.
 
-- **Name, title, affiliation** — top of `index.html` (the `.hero` section).
-- **Photo** — drop your image in `assets/` and change the `src` on `.hero__photo`
-  to e.g. `assets/photo.jpg` (a square image works best).
-- **Links** — the `href="#"` placeholders on Scholar / GitHub / X, and your email.
-- **About / News / Publications / Teaching / Projects / Contact** — each is a
-  clearly-marked `<section>`.
-- **CV** — edit `cv.html`, or replace the `CV` button's `href` with a PDF you upload.
+- **Name, title, affiliation** — the `<header class="hero">` block near the top of `<body>`.
+- **Photo** — replace `assets/profile.jpg` with your own (portrait orientation works well;
+  the frame is a circle). If you rename it, update the `src` on `<img class="portrait">`.
+- **Links** — the `href="#"` placeholders on Google Scholar / GitHub / X, and your email.
+- **About / News / Publications / Teaching / Projects / Contact** — each is a clearly-marked
+  `<section>` in the `<body>`.
+- **CV** — edit `cv.html`, or point the `CV` button's `href` at a PDF you upload.
 
-### Change the accent color / fonts
+### Change the colors / fonts
 
-Open `css/style.css`. The palette is defined once at the top:
+Open `index.html` and edit the palette at the top of the `<style>` block:
 
 ```css
-:root {
-  --accent: #3b5bdb;   /* change this to re-theme the whole site */
-  --maxw: 720px;       /* content width */
+:root{
+  --paper:#faf7f2;   /* page background            */
+  --ink:#26241f;     /* main text                  */
+  --gold:#9a7b2e;    /* accent (links, flourishes) */
+  --measure:660px;   /* reading column width        */
+  --serif:Georgia,"Iowan Old Style","Times New Roman","Songti SC",serif;
 }
 ```
 
-Dark-mode colors are in the `:root[data-theme="dark"]` block just below.
+### Try a different style
+
+Alternate design drafts (classic serif sidebar, dark tech, bold Swiss modern) live in a
+local `previews/` folder that is git-ignored. To switch, copy one over `index.html` and fix
+the asset paths (`../assets/` → `assets/`, `../cv.html` → `cv.html`).
 
 ### Use a custom domain (optional)
 
-Add a file named `CNAME` containing your domain (e.g. `www.example.com`), then set the
-DNS records your registrar requires and configure the domain under Settings → Pages.
+Add a file named `CNAME` containing your domain (e.g. `www.example.com`), set the DNS records
+your registrar requires, then configure the domain under Settings → Pages.
 
 ---
 
